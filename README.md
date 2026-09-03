@@ -11,6 +11,14 @@
 
 Personal projects.
 
+<!-- currently:start -->
+- [**RaylibPong**](https://github.com/alex1009-system32/RaylibPong) <sub>`C++` · 6 days ago</sub>
+- [**alex1009-system32.github.io**](https://github.com/alex1009-system32/alex1009-system32.github.io) <sub>`TypeScript` · 22 days ago</sub>
+- [**GameOfLive**](https://github.com/alex1009-system32/GameOfLive) <sub>`C++` · 4 months ago</sub>
+<!-- currently:end -->
+
+<sub>Written by a scheduled workflow from what was actually pushed, not by hand.</sub>
+
 ## 02. How I work
 
 - Dependencies point one way. `sections → features → lib`, never back.
