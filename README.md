@@ -1,11 +1,11 @@
+<img src="https://github.com/alex1009-system32.png" width="112" align="right" alt="">
+
+<sub>ALTO ADIGE &nbsp;·&nbsp; [alex1009-system32.github.io](https://alex1009-system32.github.io)</sub>
+
 # Alex Kerschbamer
 
-`ALTO ADIGE` &nbsp;·&nbsp; [alex1009-system32.github.io](https://alex1009-system32.github.io)
-
-Java and JavaFX on the desktop, React and TypeScript on the web, C++ and Raylib for
-the graphics work.
-
----
+> Java and JavaFX on the desktop, React and TypeScript on the web,
+> C++ and Raylib for the graphics work.
 
 ## 01. About
 
@@ -14,7 +14,7 @@ tools and one web frontend.
 
 The portfolio site is where the structure is deliberate: strict TypeScript,
 dependencies that only point one way (`sections → features → lib`), and a test suite
-split into characterization, edge cases and security — with MSW sitting in front of
+split into characterization, edge cases and security, with MSW sitting in front of
 it, so a test that reaches for the real network fails instead of quietly passing.
 
 Its README also lists what the site still gets wrong: unauthenticated API rate
@@ -32,33 +32,9 @@ limits, an external asset host, section headings that aren't headings.
 
 ## 03. Selected work
 
-### [alex1009-system32.github.io](https://github.com/alex1009-system32/alex1009-system32.github.io)
-
-`TypeScript` `React` `Tailwind` &nbsp;·&nbsp; [live](https://alex1009-system32.github.io)
-
-Single-page portfolio that reads the profile and repository list from the GitHub API
-at runtime; only the skills list is kept in code. Every push to `main` builds and
-publishes it through GitHub Actions.
-
-### [CalcettoManagementSystem](https://github.com/alex1009-system32/CalcettoManagementSystem)
-
-`Java`
-
-Runs a school calcetto tournament: team management and the UI that visualizes the
-standings.
-
-### [GameOfLive](https://github.com/alex1009-system32/GameOfLive)
-
-`C++` `Raylib`
-
-Conway's Game of Life running in a Raylib window.
-
-### [Subnet-Calculator](https://github.com/alex1009-system32/Subnet-Calculator)
-
-`Java` `JavaFX`
-
-Subnet math in a JavaFX window, and nothing else.
-
----
+| | |
+|---|---|
+| **[Portfolio](https://github.com/alex1009-system32/alex1009-system32.github.io)** <sub>· [live](https://alex1009-system32.github.io)</sub><br><sub>`TypeScript` `React` `Tailwind`</sub><br><br>Reads the profile and repository list from the GitHub API at runtime. Every push to `main` ships it through Actions. | **[CalcettoManagementSystem](https://github.com/alex1009-system32/CalcettoManagementSystem)**<br><sub>`Java`</sub><br><br>Team management and standings for a school calcetto tournament. |
+| **[GameOfLive](https://github.com/alex1009-system32/GameOfLive)**<br><sub>`C++` `Raylib`</sub><br><br>Conway's Game of Life in a Raylib window. | **[Subnet-Calculator](https://github.com/alex1009-system32/Subnet-Calculator)**<br><sub>`Java` `JavaFX`</sub><br><br>Subnet math in a JavaFX window, and nothing else. |
 
 <sub>The rest is in the repository tab.</sub>
