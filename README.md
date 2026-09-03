@@ -7,20 +7,20 @@
 > Java and JavaFX on the desktop, React and TypeScript on the web,
 > C++ and Raylib for the graphics work.
 
-## 01. About
+## 01. Currently
 
-Everything here is personal work: small, self-contained programs, mostly desktop
-tools and one web frontend.
+Personal projects. The portfolio reads the repository list from the GitHub API at
+runtime, so it stays current without a list here that would go stale.
 
-The portfolio site is where the structure is deliberate: strict TypeScript,
-dependencies that only point one way (`sections → features → lib`), and a test suite
-split into characterization, edge cases and security, with MSW sitting in front of
-it, so a test that reaches for the real network fails instead of quietly passing.
+## 02. How I work
 
-Its README also lists what the site still gets wrong: unauthenticated API rate
-limits, an external asset host, section headings that aren't headings.
+- Dependencies point one way. `sections → features → lib`, never back.
+- A test that reaches for the real network fails instead of quietly passing.
+- Tests ask for roles and visible text, never for CSS classes or component names.
+- Anything with a `VITE_` prefix ships to every visitor, and gets treated that way.
+- What a project still gets wrong belongs in its README, not in someone's head.
 
-## 02. Stack
+## 03. Stack
 
 | | |
 |---|---|
@@ -30,7 +30,7 @@ limits, an external asset host, section headings that aren't headings.
 | **Desktop & graphics** | `JavaFX` &nbsp;`Raylib` |
 | **Testing & tooling** | `Vitest` &nbsp;`MSW` &nbsp;`Git` &nbsp;`Docker` |
 
-## 03. Selected work
+## 04. Selected work
 
 | | |
 |---|---|
