@@ -12,8 +12,8 @@
 Personal projects.
 
 <!-- currently:start -->
-- [**RaylibPong**](https://github.com/alex1009-system32/RaylibPong) <sub>`C++` · 6 days ago</sub>
-- [**alex1009-system32.github.io**](https://github.com/alex1009-system32/alex1009-system32.github.io) <sub>`TypeScript` · 22 days ago</sub>
+- [**RaylibPong**](https://github.com/alex1009-system32/RaylibPong) <sub>`C++` · 5 days ago</sub>
+- [**alex1009-system32.github.io**](https://github.com/alex1009-system32/alex1009-system32.github.io) <sub>`TypeScript` · 21 days ago</sub>
 - [**GameOfLive**](https://github.com/alex1009-system32/GameOfLive) <sub>`C++` · 4 months ago</sub>
 <!-- currently:end -->
 
