@@ -1,0 +1,86 @@
+name: currently
+
+# Rewrites the block between the currently markers in README.md from the
+# repositories that were actually pushed to most recently. Nothing in that
+# block is maintained by hand.
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: currently
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+
+            const START = "<!-- currently:start -->";
+            const END = "<!-- currently:end -->";
+
+            const readme = fs.readFileSync("README.md", "utf8");
+            const block = new RegExp(`${START}[\\s\\S]*?${END}`);
+
+            // Fail loudly rather than silently writing nothing.
+            if (!block.test(readme)) {
+              core.setFailed("Marker block not found in README.md");
+              return;
+            }
+
+            const repos = await github.paginate(github.rest.repos.listForUser, {
+              username: context.repo.owner,
+              type: "owner",
+              sort: "pushed",
+              direction: "desc",
+              per_page: 100,
+            });
+
+            // The profile repository is excluded: this workflow pushes to it,
+            // so it would otherwise always be the most recent entry.
+            const recent = repos
+              .filter((r) => !r.fork && !r.archived && r.name !== context.repo.repo)
+              .slice(0, 3);
+
+            const now = Date.now();
+            const ago = (iso) => {
+              const days = Math.floor((now - new Date(iso).getTime()) / 86400000);
+              if (days <= 0) return "today";
+              if (days === 1) return "yesterday";
+              if (days < 30) return `${days} days ago`;
+              const months = Math.round(days / 30);
+              return months === 1 ? "last month" : `${months} months ago`;
+            };
+
+            const lines = recent.map((r) => {
+              const meta = [];
+              if (r.language) meta.push(`\`${r.language}\``);
+              meta.push(ago(r.pushed_at));
+              return `- [**${r.name}**](${r.html_url}) <sub>${meta.join(" · ")}</sub>`;
+            });
+
+            const body = lines.length ? lines.join("\n") : "Nothing pushed recently.";
+            fs.writeFileSync("README.md", readme.replace(block, `${START}\n${body}\n${END}`));
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No change."
+          else
+            git commit -m "Refresh currently"
+            git push
+          fi
