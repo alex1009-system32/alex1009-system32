@@ -6,8 +6,8 @@
 ## Currently i'm Personal projects.
 
 <!-- currently:start -->
-- [**RaylibPong**](https://github.com/alex1009-system32/RaylibPong) <sub>`C++` · 7 days ago</sub>
-- [**alex1009-system32.github.io**](https://github.com/alex1009-system32/alex1009-system32.github.io) <sub>`TypeScript` · 23 days ago</sub>
+- [**RaylibPong**](https://github.com/alex1009-system32/RaylibPong) <sub>`C++` · 8 days ago</sub>
+- [**alex1009-system32.github.io**](https://github.com/alex1009-system32/alex1009-system32.github.io) <sub>`TypeScript` · 24 days ago</sub>
 - [**GameOfLive**](https://github.com/alex1009-system32/GameOfLive) <sub>`C++` · 4 months ago</sub>
 <!-- currently:end -->
 
