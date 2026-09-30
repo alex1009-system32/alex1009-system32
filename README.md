@@ -8,7 +8,7 @@
 <!-- currently:start -->
 - [**RaylibPong**](https://github.com/alex1009-system32/RaylibPong) <sub>`C++` · last month</sub>
 - [**alex1009-system32.github.io**](https://github.com/alex1009-system32/alex1009-system32.github.io) <sub>`TypeScript` · 2 months ago</sub>
-- [**GameOfLive**](https://github.com/alex1009-system32/GameOfLive) <sub>`C++` · 4 months ago</sub>
+- [**GameOfLive**](https://github.com/alex1009-system32/GameOfLive) <sub>`C++` · 5 months ago</sub>
 <!-- currently:end -->
 
 <sub>Written by a scheduled workflow from what was actually pushed, not by hand.</sub>
