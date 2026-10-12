@@ -6,7 +6,7 @@
 ## Currently i'm Personal projects.
 
 <!-- currently:start -->
-- [**RaylibPong**](https://github.com/alex1009-system32/RaylibPong) <sub>`C++` · last month</sub>
+- [**RaylibPong**](https://github.com/alex1009-system32/RaylibPong) <sub>`C++` · 2 months ago</sub>
 - [**alex1009-system32.github.io**](https://github.com/alex1009-system32/alex1009-system32.github.io) <sub>`TypeScript` · 2 months ago</sub>
 - [**GameOfLive**](https://github.com/alex1009-system32/GameOfLive) <sub>`C++` · 5 months ago</sub>
 <!-- currently:end -->
